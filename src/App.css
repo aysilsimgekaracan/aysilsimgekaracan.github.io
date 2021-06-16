@@ -14,14 +14,104 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: linear-gradient(
+    rgb(63, 13, 153) 0%,
+    rgb(81, 15, 168) 35%,
+    rgb(124, 15, 168) 100%
+  ) !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  margin: 2%;
+  border-radius: 10px;
+  opacity: 0.9;
+  display: inline-block;
+  padding: 2%;
+}
+
+.HeaderContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.Name_p {
+  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: start;
+  width: 55%;
+}
+
+.Profile_p {
+  width: 15%;
+  align-items: center;
+  font-size: calc(8px + 1vmin);
+}
+
+.Resume_p {
+  width: 15%;
+  align-items: center;
+  font-size: calc(8px + 1vmin);
+}
+
+.ContactMe_p {
+  width: 15%;
+  align-items: center;
+  font-size: calc(8px + 1vmin);
+}
+
+.HeaderInfo_div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 3 1 auto;
+}
+
+.ProfilePicture {
+  border-radius: 50%;
+  align-items: center;
+  max-width: 144px;
+  max-height: 144px;
+  object-fit: contain;
+  flex: 1 2 auto;
+  margin-right: 10%;
+  align-self: center;
+}
+
+.HeaderEmoji {
+  font-size: calc(20px + 2vmin);
+  text-align: end;
+  justify-content: center;
+}
+
+.HeaderDivider {
+  width: 3px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    rgb(63, 13, 153) 0%,
+    rgb(81, 15, 168) 35%,
+    rgb(124, 15, 168) 100%
+  ) !important;
+  margin-right: 1%;
+  margin-left: 1%;
+  opacity: 0.8;
+}
+
+.HeaderDetail {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  height: 100%;
+  width: 50%;
+  flex: 2 1 auto;
+  display: flex;
+  color: black;
+  padding: 2%;
+}
+
+.HeaderDetailTitle {
+  font-size: calc(12px + 1vmin);
 }
 
 .App-link {

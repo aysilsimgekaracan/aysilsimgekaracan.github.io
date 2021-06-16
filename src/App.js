@@ -1,11 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
+<<<<<<< HEAD
 import profilePicture from "./assets/img/profilePicture.jpg";
+=======
+>>>>>>> parent of 698818f (Updates)
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+<<<<<<< HEAD
         <div className="HeaderContainer">
           <p className="Name_p">Ayşıl Simge Karacan</p>
           <p className="Profile_p">Profile</p>
@@ -36,6 +40,19 @@ function App() {
         </div>
       </header>
       <p>Çok yakında.</p>
+=======
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Çok yakında.</p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>> parent of 698818f (Updates)
     </div>
   );
 }

@@ -130,6 +130,7 @@
   .ProgressBarComponent {
     width: 80%;
     display: flex;
+    margin: 2rem;
   }
 
   .SkillsList {

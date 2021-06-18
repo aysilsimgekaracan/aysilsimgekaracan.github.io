@@ -19,10 +19,8 @@
     rgb(81, 15, 168) 35%,
     rgb(124, 15, 168) 100%
   ) !important;
-  display: flex;
   color: white;
-  width: 80%;
-  display: flex;
+  width: 90%;
   margin: auto;
   margin: 2%;
   border-radius: 10px;
@@ -83,6 +81,21 @@
     display: flex;
     color: black;
   }
+
+  .SkillsList {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    color: #718096;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5 !important;
+  }
+
+  .ProgressBar {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -113,6 +126,26 @@
     color: black;
     padding: 2%;
   }
+
+  .ProgressBarComponent {
+    width: 80%;
+    display: flex;
+  }
+
+  .SkillsList {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 70%;
+    color: #718096;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5 !important;
+  }
+  .ProgressBar {
+    width: 30%;
+  }
 }
 
 .HeaderEmoji {
@@ -137,10 +170,85 @@
 
 .HeaderDetailTitle {
   font-size: calc(12px + 1vmin);
+  font-size: 1.125rem;
+  font-weight: 300;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.EducationSection {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.EducationTitle {
+  color: #fff;
+  background-color: #ffbe3d;
+  font-weight: 700;
+  width: 30%;
+  text-align: center;
+  border-radius: 50rem;
+  padding: 0.35rem 0.5rem;
+  font-size: calc(1rem + 0.9vw);
+}
+
+.EducationSubText {
+  color: #718096;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.9 !important;
+}
+
+.WorkSection {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.WorkTitle {
+  color: #fff;
+  background-color: #5cc9a7;
+  font-weight: 700;
+  width: 30%;
+  text-align: center;
+  border-radius: 50rem;
+  padding: 0.35rem 0.5rem;
+  font-size: calc(1rem + 0.9vw);
+}
+
+.WorkSubText {
+  color: #718096;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.9 !important;
+}
+
+.SkillsSection {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.SkillsTitle {
+  color: #fff;
+  background-color: #008aff;
+  font-weight: 700;
+  width: 30%;
+  text-align: center;
+  border-radius: 50rem;
+  padding: 0.35rem 0.5rem;
+  font-size: calc(1rem + 0.9vw);
+}
+
+.SkillsSection {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 /* .HeaderInfo_div {

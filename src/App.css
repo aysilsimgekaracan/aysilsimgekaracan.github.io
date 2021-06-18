@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,7 +11,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-image: linear-gradient(
@@ -62,28 +62,64 @@
   font-size: calc(8px + 1vmin);
 }
 
-.HeaderInfo_div {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex: 3 1 auto;
+@media screen and (max-width: 1000px) {
+  .HeaderInfo_div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ProfilePicture {
+    border-radius: 50%;
+    align-items: center;
+    max-width: 144px;
+    max-height: 144px;
+    object-fit: contain;
+  }
+
+  .HeaderDetail {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    color: black;
+  }
 }
 
-.ProfilePicture {
-  border-radius: 50%;
-  align-items: center;
-  max-width: 144px;
-  max-height: 144px;
-  object-fit: contain;
-  flex: 1 2 auto;
-  margin-right: 10%;
-  align-self: center;
+@media screen and (min-width: 1000px) {
+  .HeaderInfo_div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  .ProfilePicture {
+    border-radius: 50%;
+    align-items: center;
+    max-width: 144px;
+    max-height: 144px;
+    object-fit: contain;
+    flex: 1 2 auto;
+    margin-right: 10%;
+    align-self: center;
+  }
+
+  .HeaderDetail {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: 100%;
+    width: 50%;
+    flex: 2 1 auto;
+    display: flex;
+    color: black;
+    padding: 2%;
+  }
 }
 
 .HeaderEmoji {
   font-size: calc(20px + 2vmin);
   text-align: end;
   justify-content: center;
+  align-self: center;
 }
 
 .HeaderDivider {
@@ -99,17 +135,6 @@
   opacity: 0.8;
 }
 
-.HeaderDetail {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  height: 100%;
-  width: 50%;
-  flex: 2 1 auto;
-  display: flex;
-  color: black;
-  padding: 2%;
-}
-
 .HeaderDetailTitle {
   font-size: calc(12px + 1vmin);
 }
@@ -118,11 +143,40 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* .HeaderInfo_div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+}
+
+.ProfilePicture {
+  border-radius: 50%;
+  align-items: center;
+  max-width: 144px;
+  max-height: 144px;
+  object-fit: contain;
+  flex: 1 2 auto;
+  margin-right: 10%;
+  align-self: center;
+} */
+
+/* .HeaderDetail {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  height: 100%;
+  width: 50%;
+  flex: 2 1 auto;
+  display: flex;
+  color: black;
+  padding: 2%;
+} */
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

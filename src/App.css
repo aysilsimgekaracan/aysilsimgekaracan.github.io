@@ -1,17 +1,7 @@
 .App {
   text-align: center;
+  /* -webkit-backdrop-filter: blur(10px); */
 }
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 .App-header {
   background-image: linear-gradient(
@@ -42,88 +32,47 @@
   width: 55%;
 }
 
-.Profile_p {
-  width: 15%;
-  align-items: center;
-  font-size: calc(8px + 1vmin);
-}
-
-.Resume_p {
-  width: 15%;
-  align-items: center;
-  font-size: calc(8px + 1vmin);
-}
-
-.ContactMe_p {
+.Header_p {
   width: 15%;
   align-items: center;
   font-size: calc(8px + 1vmin);
 }
 
 @media screen and (max-width: 1000px) {
-  .HeaderInfo_div {
-    height: 100%;
-    width: 100%;
-  }
-
-  .ProfilePicture {
-    border-radius: 50%;
-    align-items: center;
-    max-width: 144px;
-    max-height: 144px;
-    object-fit: contain;
-  }
-
   .HeaderDetail {
-    background-color: whitesmoke;
-    border-radius: 10px;
     width: 100%;
-    display: flex;
-    color: black;
-  }
-
-  .SkillsList {
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    color: #718096;
-    text-align: left;
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.5 !important;
   }
 
   .ProgressBar {
     width: 100%;
   }
+
+  .SwitchTheme {
+    position: absolute;
+    top: 4.5%;
+    right: 5rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .SwitchTheme {
+    width: 48px;
+    height: 48px;
+  }
   .HeaderInfo_div {
-    height: 100%;
-    width: 100%;
     display: flex;
   }
 
   .ProfilePicture {
-    border-radius: 50%;
-    align-items: center;
-    max-width: 144px;
-    max-height: 144px;
-    object-fit: contain;
     flex: 1 2 auto;
     margin-right: 10%;
     align-self: center;
   }
 
   .HeaderDetail {
-    background-color: whitesmoke;
-    border-radius: 10px;
     height: 100%;
     width: 50%;
     flex: 2 1 auto;
-    display: flex;
-    color: black;
     padding: 2%;
   }
 
@@ -134,19 +83,29 @@
   }
 
   .SkillsList {
-    align-items: center;
-    align-self: center;
-    justify-content: center;
     width: 70%;
-    color: #718096;
-    text-align: left;
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.5 !important;
   }
   .ProgressBar {
     width: 30%;
   }
+}
+
+.HeaderDetail {
+  border-radius: 10px;
+  display: flex;
+}
+
+.HeaderInfo_div {
+  height: 100%;
+  width: 100%;
+}
+
+.ProfilePicture {
+  border-radius: 50%;
+  align-items: center;
+  max-width: 144px;
+  max-height: 144px;
+  object-fit: contain;
 }
 
 .HeaderEmoji {
@@ -176,44 +135,21 @@
   font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.EducationSection {
+.section {
   width: 90%;
   margin: auto;
   margin-bottom: 5%;
 }
 
-.EducationTitle {
-  color: #fff;
-  background-color: #ffbe3d;
-  font-weight: 700;
-  width: 30%;
-  text-align: center;
-  border-radius: 50rem;
-  padding: 0.35rem 0.5rem;
-  font-size: calc(1rem + 0.9vw);
-}
-
-.EducationSubText {
-  color: #718096;
+.subText {
   text-align: left;
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.9 !important;
 }
 
-.WorkSection {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 5%;
-}
-
-.WorkTitle {
+.title {
   color: #fff;
-  background-color: #5cc9a7;
   font-weight: 700;
   width: 30%;
   text-align: center;
@@ -222,42 +158,11 @@
   font-size: calc(1rem + 0.9vw);
 }
 
-.WorkSubText {
-  color: #718096;
-  text-align: left;
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.9 !important;
-}
-
-.SkillsSection {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 5%;
-}
-
-.SkillsTitle {
-  color: #fff;
-  background-color: #008aff;
-  font-weight: 700;
-  width: 30%;
-  text-align: center;
-  border-radius: 50rem;
-  padding: 0.35rem 0.5rem;
-  font-size: calc(1rem + 0.9vw);
-}
-
-.SkillsSection {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 5%;
-}
-
-/* .HeaderInfo_div {
-  height: 100%;
-  width: 100%;
-  display: flex;
-
+.HamburgerMenu {
+  /* max-width: 100% !important; */
+  /* overflow-y: none;
+  overflow-x: none; */
+  /* overflow: hidden; */
 }
 
 .ProfilePicture {
@@ -269,24 +174,12 @@
   flex: 1 2 auto;
   margin-right: 10%;
   align-self: center;
-} */
+}
 
-/* .HeaderDetail {
-  background-color: whitesmoke;
-  border-radius: 10px;
-  height: 100%;
-  width: 50%;
-  flex: 2 1 auto;
-  display: flex;
-  color: black;
-  padding: 2%;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.SwitchTheme {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 20px;
+}

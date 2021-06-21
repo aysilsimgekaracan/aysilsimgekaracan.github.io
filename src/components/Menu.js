@@ -42,7 +42,7 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #effffa;
+  background: ${({ theme }) => theme.hamburgerMenu_bg};
   transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(100%)")};
   overflow: hidden
   height: 100vh;
@@ -62,7 +62,7 @@ const StyledMenu = styled.nav`
     padding: 2rem 0;
     font-weight: 600;
     letter-spacing: 0.5rem;
-    color: #000;
+    color:  ${({ theme }) => theme.hamburgerMenu_color};
     text-decoration: none;
     transition: color 0.3s linear;
     @media (max-width: 576px) {

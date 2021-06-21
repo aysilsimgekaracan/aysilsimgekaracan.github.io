@@ -46,8 +46,8 @@ function App() {
           <header className="App-header">
             <Media
               queries={{
-                small: "(max-width: 800px)",
-                large: "(min-width: 800px)",
+                small: "(max-width: 1000px)",
+                large: "(min-width: 1000px)",
               }}
             >
               {(matches) => (

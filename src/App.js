@@ -1,11 +1,12 @@
 // import logo from "./logo.svg";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "react-circular-progressbar/dist/styles.css";
 import Media from "react-media";
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
 import { lightTheme, darkTheme } from "./components/Themes";
+import CustomScrollButon from "./components/CustomScrollButton";
 
 // import { slide as Menu } from "react-burger-menu";
 // import Hamburger from "hamburger-react";
@@ -14,7 +15,7 @@ import { lightTheme, darkTheme } from "./components/Themes";
 
 import "./App.css";
 import CustomProgressBar from "./components/CustomProgressBar";
-import profilePicture from "./assets/img/profilePicture.jpg";
+// import profilePicture from "./assets/img/profilePicture.jpg";
 import Menu from "./components/Menu";
 import Burger from "./components/Burger";
 import CustomSection from "./components/CustomSection";
@@ -22,6 +23,13 @@ import CustomSection from "./components/CustomSection";
 function App() {
   const [menuOpened, setMenuOpened] = useState(false);
   const [isLightMode, setIsLightMode] = useState(true);
+
+  const workRef = useRef(null);
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+
+  const scrollToRef = (ref) =>
+    window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
 
   useEffect(() => {
     if (
@@ -42,6 +50,7 @@ function App() {
     <ThemeProvider theme={isLightMode ? lightTheme : darkTheme}>
       <>
         <GlobalStyles />
+        <CustomScrollButon />
         <div className="App">
           <header className="App-header">
             <Media
@@ -71,17 +80,53 @@ function App() {
                     <>
                       <Burger open={menuOpened} setOpen={setMenuOpened} />
                       <Menu open={menuOpened} setOpen={setMenuOpened}>
-                        <a href="/">Profile</a>
-                        <a href="/">Resume</a>
-                        <a href="/">Contact Me</a>
+                        <a
+                          onClick={() => {
+                            scrollToRef(workRef);
+                            setMenuOpened(false);
+                          }}
+                        >
+                          Work
+                        </a>
+                        <a
+                          onClick={() => {
+                            scrollToRef(projectsRef);
+                            setMenuOpened(false);
+                          }}
+                        >
+                          Projects
+                        </a>
+                        <a
+                          onClick={() => {
+                            scrollToRef(skillsRef);
+                            setMenuOpened(false);
+                          }}
+                        >
+                          Skills
+                        </a>
                       </Menu>
                     </>
                   )}
                   {matches.large && (
                     <>
-                      <p className="Header_p">Profile</p>
-                      <p className="Header_p">Resume</p>
-                      <p className="Header_p">Contact Me</p>
+                      <a
+                        className="Header_p"
+                        onClick={() => scrollToRef(workRef)}
+                      >
+                        Work
+                      </a>
+                      <a
+                        className="Header_p"
+                        onClick={() => scrollToRef(projectsRef)}
+                      >
+                        Projects
+                      </a>
+                      <a
+                        className="Header_p"
+                        onClick={() => scrollToRef(skillsRef)}
+                      >
+                        Skills
+                      </a>
                     </>
                   )}
                 </div>
@@ -120,7 +165,11 @@ function App() {
               </div>
             </div>
           </header>
-          <CustomSection title="Education" backgroundColor="#ffbe3d">
+          <CustomSection
+            title="Education"
+            backgroundColor="#ffbe3d"
+            id="education"
+          >
             <p
               className="subText"
               style={{
@@ -138,7 +187,11 @@ function App() {
             </p>
           </CustomSection>
 
-          <CustomSection title="Work" backgroundColor="#5cc9a7">
+          <CustomSection
+            title="Work"
+            backgroundColor="#5cc9a7"
+            reference={workRef}
+          >
             <p
               className="subText"
               style={{
@@ -156,7 +209,17 @@ function App() {
             </p>
           </CustomSection>
 
-          <CustomSection title="Skills" backgroundColor="#008aff">
+          <CustomSection
+            title="Projects"
+            backgroundColor="#f25767"
+            reference={projectsRef}
+          ></CustomSection>
+
+          <CustomSection
+            title="Skills"
+            backgroundColor="#008aff"
+            reference={skillsRef}
+          >
             <CustomProgressBar direction="right" />
             <CustomProgressBar direction="right" />
             <CustomProgressBar direction="right" />

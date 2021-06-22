@@ -3,6 +3,20 @@
   /* -webkit-backdrop-filter: blur(10px); */
 }
 
+a:active {
+  color: white;
+}
+
+/* a:hover {
+  background-color: #555;
+} */
+
+a {
+  color: white;
+  font-family: helvetica;
+  text-decoration: none;
+}
+
 .App-header {
   background-image: linear-gradient(
     rgb(63, 13, 153) 0%,
@@ -36,6 +50,10 @@
   width: 15%;
   align-items: center;
   font-size: calc(8px + 1vmin);
+  text-decoration: none;
+  color: "white";
+  align-self: center;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {

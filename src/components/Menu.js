@@ -6,15 +6,13 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: ${({ theme }) => theme.hamburgerMenu_bg};
-  transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(100%)")};
-  overflow: hidden
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
-  touch-action: none;
   top: 0;
-  right: 0;
+  left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 20;
   @media (max-width: 576px) {
@@ -25,7 +23,7 @@ const StyledMenu = styled.nav`
     padding: 2rem 0;
     font-weight: 600;
     letter-spacing: 0.5rem;
-    color:  ${({ theme }) => theme.hamburgerMenu_color};
+    color: ${({ theme }) => theme.hamburgerMenu_color};
     text-decoration: none;
     transition: color 0.3s linear;
     cursor: pointer;

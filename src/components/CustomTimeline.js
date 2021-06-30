@@ -38,6 +38,10 @@ const StyledHeading = styled.p`
 `;
 
 const StyledImage = styled.img`
+  @media (max-width: 768px) {
+    max-width: 300px;
+    max-height: 200px;
+  }
   max-width: 500px;
   max-height: 400px;
   width: auto;

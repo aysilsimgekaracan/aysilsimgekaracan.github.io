@@ -7,4 +7,9 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.30s linear;
   }
 
+  typography {
+    background: ${({ theme }) => theme.typography_color};
+    transition: all 0.30s linear;
+  }
+
   `;

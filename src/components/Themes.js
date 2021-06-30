@@ -6,6 +6,10 @@ export const lightTheme = {
   skillsList_color: "#718096",
   hamburgerMenu_bg: "#effffa",
   hamburgerMenu_color: "#000",
+  typography_date_color: "#808080",
+  typography_color: "#495059",
+  timeline_bg: "#D3D3D3",
+  typography_heading_color: "#152c5b",
 };
 
 export const darkTheme = {
@@ -16,4 +20,8 @@ export const darkTheme = {
   skillsList_color: "white",
   hamburgerMenu_bg: "#49484a",
   hamburgerMenu_color: "#fff",
+  typography_date_color: "#D3D3D3",
+  typography_color: "white",
+  timeline_bg: "#707070",
+  typography_heading_color: "white",
 };

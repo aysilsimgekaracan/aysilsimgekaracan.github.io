@@ -180,12 +180,12 @@ a {
   font-size: calc(1rem + 0.9vw);
 }
 
-.HamburgerMenu {
+/* .HamburgerMenu {
   /* max-width: 100% !important; */
-  /* overflow-y: none;
+/* overflow-y: none;
   overflow-x: none; */
-  /* overflow: hidden; */
-}
+/* overflow: hidden;
+} */
 
 .ProfilePicture {
   border-radius: 50%;

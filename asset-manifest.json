@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.c67f40ae.chunk.css",
-    "main.js": "/static/js/main.e4bbcc6d.chunk.js",
-    "main.js.map": "/static/js/main.e4bbcc6d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0d371d0d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0d371d0d.js.map",
+    "main.css": "/static/css/main.aa50fff4.chunk.css",
+    "main.js": "/static/js/main.fe0ef5b1.chunk.js",
+    "main.js.map": "/static/js/main.fe0ef5b1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b4b2e6fc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b4b2e6fc.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/static/css/2.6c0f60ba.chunk.css",
-    "static/js/2.cb979ddf.chunk.js": "/static/js/2.cb979ddf.chunk.js",
-    "static/js/2.cb979ddf.chunk.js.map": "/static/js/2.cb979ddf.chunk.js.map",
-    "static/js/3.9abece60.chunk.js": "/static/js/3.9abece60.chunk.js",
-    "static/js/3.9abece60.chunk.js.map": "/static/js/3.9abece60.chunk.js.map",
+    "static/js/2.9a933e00.chunk.js": "/static/js/2.9a933e00.chunk.js",
+    "static/js/2.9a933e00.chunk.js.map": "/static/js/2.9a933e00.chunk.js.map",
+    "static/js/3.b9136119.chunk.js": "/static/js/3.b9136119.chunk.js",
+    "static/js/3.b9136119.chunk.js.map": "/static/js/3.b9136119.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.6c0f60ba.chunk.css.map": "/static/css/2.6c0f60ba.chunk.css.map",
-    "static/css/main.c67f40ae.chunk.css.map": "/static/css/main.c67f40ae.chunk.css.map",
-    "static/js/2.cb979ddf.chunk.js.LICENSE.txt": "/static/js/2.cb979ddf.chunk.js.LICENSE.txt",
-    "static/media/profilePicture.797f348e.jpg": "/static/media/profilePicture.797f348e.jpg"
+    "static/css/main.aa50fff4.chunk.css.map": "/static/css/main.aa50fff4.chunk.css.map",
+    "static/js/2.9a933e00.chunk.js.LICENSE.txt": "/static/js/2.9a933e00.chunk.js.LICENSE.txt",
+    "static/media/gdg_certificate.dcc6580a.png": "/static/media/gdg_certificate.dcc6580a.png",
+    "static/media/hacking_with_swift_logo.8bfa8a70.png": "/static/media/hacking_with_swift_logo.8bfa8a70.png",
+    "static/media/website.ed4fd4d5.png": "/static/media/website.ed4fd4d5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0d371d0d.js",
+    "static/js/runtime-main.b4b2e6fc.js",
     "static/css/2.6c0f60ba.chunk.css",
-    "static/js/2.cb979ddf.chunk.js",
-    "static/css/main.c67f40ae.chunk.css",
-    "static/js/main.e4bbcc6d.chunk.js"
+    "static/js/2.9a933e00.chunk.js",
+    "static/css/main.aa50fff4.chunk.css",
+    "static/js/main.fe0ef5b1.chunk.js"
   ]
 }

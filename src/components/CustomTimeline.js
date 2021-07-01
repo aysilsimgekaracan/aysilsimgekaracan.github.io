@@ -10,6 +10,7 @@ import {
 import { Typography, Paper } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
+import Media from "react-media";
 
 const StyledDate = styled.p`
   font-size: small;
@@ -39,8 +40,8 @@ const StyledHeading = styled.p`
 
 const StyledImage = styled.img`
   @media (max-width: 768px) {
-    max-width: 300px;
-    max-height: 200px;
+    max-width: 200px;
+    max-height: 150px;
   }
   max-width: 500px;
   max-height: 400px;
@@ -65,74 +66,154 @@ function CustomTimeline({
   timelineStyle = null,
 }) {
   return (
-    <React.Fragment>
-      <Timeline align={align} style={timelineStyle}>
-        {isCustomized
-          ? data.map((item) => {
-              return (
-                <TimelineItem>
-                  <TimelineOppositeContent>
-                    <StyledDate>{item.date}</StyledDate>
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                    <TimelineDot>{item.icon}</TimelineDot>
-                    {item.text != data[data.length - 1].text && (
-                      <TimelineConnector />
-                    )}
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <Paper
-                      elevation={3}
-                      style={{
-                        textAlign: "center",
-                        borderRadius: "10px",
-                      }}
-                    >
-                      <StyledPaper>
-                        <StyledHeading>{item.text}</StyledHeading>
-                        <StyledImage src={item.image} />
-                        <StyledText>{item.subtext}</StyledText>
-                        {item.links.length > 0 &&
-                          item.links.map((link) => {
-                            return (
-                              <>
-                                <StyledLink
-                                  href={link.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  {link.title}
-                                </StyledLink>{" "}
-                                <br />
-                              </>
-                            );
-                          })}
-                      </StyledPaper>
-                    </Paper>
-                  </TimelineContent>
-                </TimelineItem>
-              );
-            })
-          : data.map((item) => {
-              return (
-                <TimelineItem>
-                  <TimelineOppositeContent>
-                    <StyledDate>{item.date}</StyledDate>
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    {item.text != data[data.length - 1].text && (
-                      <TimelineConnector />
-                    )}
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <StyledText>{item.text}</StyledText>
-                  </TimelineContent>
-                </TimelineItem>
-              );
-            })}
-      </Timeline>
-    </React.Fragment>
+    <Media
+      queries={{
+        small: "(max-width: 450px)",
+        large: "(min-width: 450px)",
+      }}
+    >
+      {(matches) => (
+        <React.Fragment>
+          {matches.large && (
+            <Timeline align={align} style={timelineStyle}>
+              {isCustomized
+                ? data.map((item) => {
+                    return (
+                      <TimelineItem>
+                        <TimelineOppositeContent>
+                          <StyledDate>{item.date}</StyledDate>
+                        </TimelineOppositeContent>{" "}
+                        <TimelineSeparator>
+                          <TimelineDot>{item.icon}</TimelineDot>
+                          {item.text != data[data.length - 1].text && (
+                            <TimelineConnector />
+                          )}
+                        </TimelineSeparator>
+                        <TimelineContent>
+                          <Paper
+                            elevation={3}
+                            style={{
+                              textAlign: "center",
+                              borderRadius: "10px",
+                            }}
+                          >
+                            <StyledPaper>
+                              <StyledHeading>{item.text}</StyledHeading>
+                              <StyledImage src={item.image} />
+                              <StyledText>{item.subtext}</StyledText>
+                              {item.links.length > 0 &&
+                                item.links.map((link) => {
+                                  return (
+                                    <>
+                                      <StyledLink
+                                        href={link.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        {link.title}
+                                      </StyledLink>{" "}
+                                      <br />
+                                    </>
+                                  );
+                                })}
+                            </StyledPaper>
+                          </Paper>
+                        </TimelineContent>
+                      </TimelineItem>
+                    );
+                  })
+                : data.map((item) => {
+                    return (
+                      <TimelineItem>
+                        <TimelineOppositeContent>
+                          <StyledDate>{item.date}</StyledDate>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                          <TimelineDot />
+                          {item.text != data[data.length - 1].text && (
+                            <TimelineConnector />
+                          )}
+                        </TimelineSeparator>
+                        <TimelineContent>
+                          <StyledText>{item.text}</StyledText>
+                        </TimelineContent>
+                      </TimelineItem>
+                    );
+                  })}
+            </Timeline>
+          )}
+          {matches.small && (
+            <Timeline align="left" style={timelineStyle}>
+              {isCustomized
+                ? data.map((item) => {
+                    return (
+                      <TimelineItem>
+                        <TimelineOppositeContent>
+                          <StyledDate>{item.date}</StyledDate>
+                        </TimelineOppositeContent>{" "}
+                        {/* <TimelineSeparator>
+                        <TimelineDot>{item.icon}</TimelineDot>
+                        {item.text != data[data.length - 1].text && (
+                          <TimelineConnector />
+                        )}
+                      </TimelineSeparator> */}
+                        {/* <TimelineContent> */}
+                        <Paper
+                          elevation={3}
+                          style={{
+                            textAlign: "center",
+                            borderRadius: "10px",
+                            marginBottom: "10px",
+                          }}
+                        >
+                          <StyledPaper>
+                            <StyledHeading>{item.text}</StyledHeading>
+                            <StyledImage src={item.image} />
+                            <StyledText>{item.subtext}</StyledText>
+                            {item.links.length > 0 &&
+                              item.links.map((link) => {
+                                return (
+                                  <>
+                                    <StyledLink
+                                      href={link.link}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      {link.title}
+                                    </StyledLink>{" "}
+                                    <br />
+                                  </>
+                                );
+                              })}
+                          </StyledPaper>
+                        </Paper>
+                        {/* </TimelineContent> */}
+                      </TimelineItem>
+                    );
+                  })
+                : data.map((item) => {
+                    return (
+                      <TimelineItem>
+                        <TimelineOppositeContent>
+                          <StyledDate>{item.date}</StyledDate>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                          <TimelineDot />
+                          {item.text != data[data.length - 1].text && (
+                            <TimelineConnector />
+                          )}
+                        </TimelineSeparator>
+                        <TimelineContent>
+                          <StyledText>{item.text}</StyledText>
+                        </TimelineContent>
+                      </TimelineItem>
+                    );
+                  })}
+            </Timeline>
+          )}
+        </React.Fragment>
+      )}
+    </Media>
   );
 }
 

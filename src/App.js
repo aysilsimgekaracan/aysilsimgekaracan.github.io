@@ -2,14 +2,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import "react-circular-progressbar/dist/styles.css";
 import Media from "react-media";
-import { IoIosMoon, IoIosSunny } from "react-icons/io";
+import {
+  IoIosMoon,
+  IoIosSunny,
+  IoLogoLinkedin,
+  IoLogoGithub,
+} from "react-icons/io";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
 import { lightTheme, darkTheme } from "./components/Themes";
 import CustomScrollButon from "./components/CustomScrollButton";
-import strings from "./localization/localization";
 import CustomTimeline from "./components/CustomTimeline";
 
+// import strings from "./localization/localization";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import Dropdown from "react-dropdown";
 // import "react-dropdown/style.css";
@@ -18,10 +23,10 @@ import CustomTimeline from "./components/CustomTimeline";
 // import Hamburger from "hamburger-react";
 // import FocusLock from "react-focus-lock";
 // import styled from "styled-components";
+// import profilePicture from "./assets/img/profilePicture.jpg";
 
 import "./App.css";
 import CustomProgressBar from "./components/CustomProgressBar";
-// import profilePicture from "./assets/img/profilePicture.jpg";
 import Menu from "./components/Menu";
 import Burger from "./components/Burger";
 import CustomSection from "./components/CustomSection";
@@ -81,11 +86,16 @@ const projectsArray = [
 
   {
     date: "2020",
-    text: "Hacking With Swift (UIKit)",
+    text: "100 Days of Swift (UIKit)",
     subtext:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula sed eros eget facilisis. Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae. Mauris tempor quam leo, ut blandit risus mollis sit amet. Nam leo erat, vehicula vel hendrerit nec, ultrices quis tellus.",
+      "100 Days of Swift is a course that is aimed for the beginners who want to learn how to build real IOS apps by Paul Hudson. I used this course to improve my knowledge about swift and to make lots of projects.",
     image: hacking_with_swift_logo,
     links: [
+      {
+        title: "100 Days of Swift",
+        link: "https://www.hackingwithswift.com/100",
+      },
+
       {
         title: "Github Repository of This Project",
         link: "https://github.com/aysilsimgekaracan/HackingWithSwift",
@@ -94,6 +104,11 @@ const projectsArray = [
     icon: <AppleIcon />,
   },
 ];
+
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, "_blank");
+  if (newWindow) newWindow.opener = null;
+};
 
 function App() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -267,15 +282,37 @@ function App() {
                 <p className="HeaderEmoji">👩‍💻</p>
                 <hr className="HeaderDivider" />
                 <div className="HeaderDetailText">
-                  <p className="HeaderDetailTitle">{strings.whoIAm}</p>
+                  <p className="HeaderDetailTitle">Hi! I'm Ayşıl</p>
                   <p className="HeaderDetailSubtitle">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec vehicula sed eros eget facilisis. Maecenas varius
-                    sapien ut eleifend facilisis. Nam gravida est nisi, non
-                    pretium mauris condimentum vitae. Mauris tempor quam leo, ut
-                    blandit risus mollis sit amet. Nam leo erat, vehicula vel
-                    hendrerit nec, ultrices quis tellus.
+                    I am a computer engineering student who wants to become a
+                    mobile app developer.
                   </p>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <button
+                      className="socialMediaButton"
+                      onClick={() =>
+                        openInNewTab("http://github.com/aysilsimgekaracan")
+                      }
+                    >
+                      <IoLogoGithub size={32} color="#211F1F" />
+                    </button>
+                    <button
+                      className="socialMediaButton"
+                      onClick={() =>
+                        openInNewTab(
+                          "https://www.linkedin.com/in/ayşıl-simge-karacan-4b0597202/"
+                        )
+                      }
+                    >
+                      <IoLogoLinkedin size={32} color="#0077b5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

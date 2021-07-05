@@ -121,6 +121,53 @@ const worksArray = [
   },
 ];
 
+const skillsArray = [
+  {
+    title: "React Native",
+    percentage: 70,
+    progressCircleTitle: "",
+    bulletedList: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
+      "Donec vehicula sed eros eget facilisis.",
+    ],
+    direction: "right",
+  },
+  {
+    title: "Swift",
+    percentage: 70,
+    progressCircleTitle: "",
+    bulletedList: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
+      "Donec vehicula sed eros eget facilisis.",
+    ],
+    direction: "right",
+  },
+  {
+    title: "C/C++",
+    percentage: 70,
+    progressCircleTitle: "",
+    bulletedList: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
+      "Donec vehicula sed eros eget facilisis.",
+    ],
+    direction: "right",
+  },
+  {
+    title: "Python",
+    percentage: 70,
+    progressCircleTitle: "",
+    bulletedList: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
+      "Donec vehicula sed eros eget facilisis.",
+    ],
+    direction: "right",
+  },
+];
+
 const openInNewTab = (url) => {
   const newWindow = window.open(url, "_blank");
   if (newWindow) newWindow.opener = null;
@@ -397,13 +444,9 @@ function App() {
             backgroundColor="#008aff"
             reference={skillsRef}
           >
-            <CustomProgressBar direction="right" />
-            <CustomProgressBar direction="right" />
-            <CustomProgressBar direction="right" />
+            <CustomProgressBar list={skillsArray} />
           </CustomSection>
 
-          <p>Çok yakında.</p>
-          <div></div>
           <footer className="App-header"></footer>
         </div>
       </>

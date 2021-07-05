@@ -14,7 +14,16 @@ const SkillsList = styled.span`
   line-height: 1.5 !important;
 `;
 
-const renderProgressBar = () => {
+const StyledTitle = styled.p`
+  color: ${({ theme }) => theme.workTitle_color};
+  transition: all 0.3s linear;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.9 !important;
+  text-align: left;
+`;
+
+const renderProgressBar = (value, text) => {
   return (
     <div className="ProgressBar" id="wrapper">
       <div
@@ -25,32 +34,52 @@ const renderProgressBar = () => {
           display: "inline-block",
         }}
       >
-        <CircularProgressbar value={70} text={`${70}%`} />
+        <CircularProgressbar value={value} text={text} />
       </div>
     </div>
   );
 };
 
-const renderSkillList = () => {
+const renderSkillList = (list) => {
   return (
     <SkillsList className="SkillsList">
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Maecenas varius sapien ut eleifend facilisis.</li>
-      <li>
-        Nam gravida est nisi, non pretium mauris condimentum vitae. Mauris
-        tempor quam leo, ut blandit risus mollis sit amet.
-      </li>
+      {list.map((text) => {
+        return <li>{text}</li>;
+      })}
     </SkillsList>
   );
 };
 
-function CustomProgressBar({ list, direction = "right" }) {
+function CustomProgressBar({ list }) {
   return (
-    <div className="ProgressBarComponent">
-      {direction !== "left"
-        ? [renderProgressBar(), renderSkillList()]
-        : [renderSkillList(), renderProgressBar()]}
-    </div>
+    <React.Fragment>
+      {list.map((item) => {
+        return (
+          <>
+            <StyledTitle style={{ textAlign: "center" }}>
+              {item.title}
+            </StyledTitle>
+            <div className="ProgressBarComponent">
+              {item.direction !== "left"
+                ? [
+                    renderProgressBar(
+                      item.percentage,
+                      item.progressCircleTitle
+                    ),
+                    renderSkillList(item.bulletedList),
+                  ]
+                : [
+                    renderSkillList(item.bulletedList),
+                    renderProgressBar(
+                      item.percentage,
+                      item.progressCircleTitle
+                    ),
+                  ]}
+            </div>
+          </>
+        );
+      })}
+    </React.Fragment>
   );
 }
 

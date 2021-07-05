@@ -38,6 +38,8 @@ import AndroidIcon from "@material-ui/icons/Android";
 import website from "./assets/img/website.png";
 import gdg_certificate from "./assets/img/gdg_certificate.png";
 import hacking_with_swift_logo from "./assets/img/hacking_with_swift_logo.png";
+import CustomWorkSection from "./components/CustomWorkSection";
+import makas_logo from "./assets/img/makas_logo.jpeg";
 
 const educationArray = [
   {
@@ -102,6 +104,20 @@ const projectsArray = [
       },
     ],
     icon: <AppleIcon />,
+  },
+];
+
+const worksArray = [
+  {
+    title: "MakasApp",
+    image: makas_logo,
+    date: "Dec 2020 - May 2021",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula sed eros eget facilisis. Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae. Mauris tempor quam leo, ut blandit risus mollis sit amet. Nam leo erat, vehicula vel hendrerit nec, ultrices quis tellus.",
+    bulletedList: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
+      "Donec vehicula sed eros eget facilisis.",
+    ],
   },
 ];
 
@@ -372,6 +388,8 @@ function App() {
               sit amet. Nam leo erat, vehicula vel hendrerit nec, ultrices quis
               tellus.
             </p>
+
+            <CustomWorkSection works={worksArray} />
           </CustomSection>
 
           <CustomSection

@@ -10,6 +10,7 @@ export const lightTheme = {
   typography_color: "#495059",
   timeline_bg: "#D3D3D3",
   typography_heading_color: "#152c5b",
+  workTitle_color: "#152c5b",
 };
 
 export const darkTheme = {
@@ -24,4 +25,5 @@ export const darkTheme = {
   typography_color: "white",
   timeline_bg: "#707070",
   typography_heading_color: "white",
+  workTitle_color: "#F0FFF0",
 };

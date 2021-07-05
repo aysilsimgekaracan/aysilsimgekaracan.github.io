@@ -1,4 +1,3 @@
-// import logo from "./logo.svg";
 import React, { useState, useEffect, useRef } from "react";
 import "react-circular-progressbar/dist/styles.css";
 import Media from "react-media";
@@ -45,7 +44,7 @@ const openInNewTab = (url) => {
 };
 
 function App() {
-  const [menuOpened, setMenuOpened] = useState(false);
+  // const [menuOpened, setMenuOpened] = useState(false);
   const [isLightMode, setIsLightMode] = useState(true);
   // const [language, setLanguage] = useState("en");
 
@@ -82,12 +81,15 @@ function App() {
         className="SwitchTheme"
         style={{
           borderColor: isLightMode ? "white" : "yellow",
+          alignItems: "center",
+          alignContent: "center",
+          textAlign: "center",
         }}
       >
         {isLightMode ? (
-          <IoIosMoon size={32} color="white" />
+          <IoIosMoon size={25} color="white" />
         ) : (
-          <IoIosSunny size={32} color="#ffbe3d" />
+          <IoIosSunny size={25} color="#ffbe3d" />
         )}
       </button>
     );
@@ -133,7 +135,7 @@ function App() {
                 <div className="HeaderContainer">
                   {matches.small && (
                     <div style={{ width: "100%" }}>
-                      <Burger open={menuOpened} setOpen={setMenuOpened} />
+                      {/* <Burger open={menuOpened} setOpen={setMenuOpened} />
                       <Menu open={menuOpened} setOpen={setMenuOpened}>
                         <a
                           onClick={() => {
@@ -159,9 +161,9 @@ function App() {
                         >
                           Skills
                         </a>
-                      </Menu>
+                      </Menu> */}
                       <div
-                        style={{ display: "flex", justifyContent: "flex-end" }}
+                        style={{ display: "flex", justifyContent: "center" }}
                       >
                         <p className="Name_p">Ayşıl Simge Karacan</p>
                         {renderThemeToggle()}
@@ -264,7 +266,7 @@ function App() {
                   : darkTheme.subText_color,
               }}
             >
-              I am 3rd Year Computer Engineering Student at Beykoz University.
+              I'm 3rd Year Computer Engineering Student at Beykoz University.
             </p>
             <CustomTimeline
               align="alternate"
@@ -299,12 +301,9 @@ function App() {
                   : darkTheme.subText_color,
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              vehicula sed eros eget facilisis. Maecenas varius sapien ut
-              eleifend facilisis. Nam gravida est nisi, non pretium mauris
-              condimentum vitae. Mauris tempor quam leo, ut blandit risus mollis
-              sit amet. Nam leo erat, vehicula vel hendrerit nec, ultrices quis
-              tellus.
+              I'm currently spending my time with my personal projects and
+              self-development, but I am open to internship or job offers
+              related to Swift (preferably) and/or React Native.
             </p>
 
             <CustomWorkSection works={worksArray} />
@@ -318,7 +317,7 @@ function App() {
             <CustomProgressBar list={skillsArray} />
           </CustomSection>
 
-          <footer className="App-header"></footer>
+          <footer className="App-header" style={{ height: 70 }}></footer>
         </div>
       </>
     </ThemeProvider>

@@ -10,18 +10,18 @@ import makas_logo from "./assets/img/makas_logo.jpeg";
 export const educationArray = [
   {
     date: "2019-2023",
-    text: "Beykoz Üniversitesi Computer Engineering",
+    text: "Beykoz University Computer Engineering",
   },
   {
     date: "2018-2019",
-    text: "Beykoz Üniversitesi İngilizce Hazırlık",
+    text: "Beykoz University English Prep School",
   },
 ];
 
 export const projectsArray = [
   {
     date: "2021",
-    text: "My Portfolio Website - aysilsimgekaracan.github.io",
+    text: "My Portfolio Website",
     subtext:
       "This is my first Web project. I built this site using React. This project allowed me to improve my knowledge about HTML, CSS and React",
     image: website,
@@ -78,57 +78,66 @@ export const worksArray = [
     title: "MakasApp",
     image: makas_logo,
     date: "Dec 2020 - May 2021",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula sed eros eget facilisis. Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae. Mauris tempor quam leo, ut blandit risus mollis sit amet. Nam leo erat, vehicula vel hendrerit nec, ultrices quis tellus.",
+    text: "This is my first internship. I was in this company as a part time React Native Developer. Working in this job has helped me a lot.",
     bulletedList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
-      "Donec vehicula sed eros eget facilisis.",
+      "I worked on mobile app projects made using React Native.",
+      "I saw how to work as a team on a software project",
+      "I had an experience with Redux",
+      "I learned how to use git and github.",
     ],
   },
 ];
 
 export const skillsArray = [
   {
-    title: "React Native",
-    percentage: 70,
-    progressCircleTitle: "",
+    title: "React Native (and JavaScript)",
+    percentage: 75,
+    progressCircleTitle: "75%",
     bulletedList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
-      "Donec vehicula sed eros eget facilisis.",
+      "With the contribution of my internship, I worked with React Native for hundreds of hours.",
+      "This is the framework and language I feel most comfortable right now.",
+      "Even if the projects I will take part in are big, it is easy for me to adapt.",
     ],
     direction: "right",
   },
   {
     title: "Swift",
-    percentage: 70,
-    progressCircleTitle: "",
+    percentage: 55,
+    progressCircleTitle: "55%",
     bulletedList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
-      "Donec vehicula sed eros eget facilisis.",
+      "Swift is my first and most wanted language to learn.",
+      "I have developed some small projects (Calculator, RPS_Game, Stopwatch..) with swift since prep class.",
+      "I had to stay away from this language for a while because I was doing my internship, but I want to continue to learn very well and make a nice project.",
     ],
     direction: "right",
   },
   {
     title: "C/C++",
-    percentage: 70,
-    progressCircleTitle: "",
+    percentage: 35,
+    progressCircleTitle: "35%",
     bulletedList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
-      "Donec vehicula sed eros eget facilisis.",
+      "C and C++ are the languages I've seen in my school classes",
+      "I used these languages in my school projects",
     ],
     direction: "right",
   },
   {
     title: "Python",
-    percentage: 70,
-    progressCircleTitle: "",
+    percentage: 45,
+    progressCircleTitle: "45%",
     bulletedList: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Maecenas varius sapien ut eleifend facilisis. Nam gravida est nisi, non pretium mauris condimentum vitae.",
-      "Donec vehicula sed eros eget facilisis.",
+      "Python was among the languages ​​I wanted to learn",
+      "I developed small projects. (Web scraper, Some small games using pygame, Tic-Tac-Toe and a trading bot... )",
+    ],
+    direction: "right",
+  },
+  {
+    title: "Kotlin",
+    percentage: 15,
+    progressCircleTitle: "15%",
+    bulletedList: [
+      "Since I was curious about how things work on the Android side and I felt the need to know, I tried to learn this language and I finished the course you can see in the projects section",
+      "This helped me catch the differences between these two platforms and languages.",
     ],
     direction: "right",
   },

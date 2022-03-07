@@ -27,7 +27,7 @@ export const projectsArray = [
     image: website,
     links: [
       {
-        title: "Github Repository of This Project",
+        title: "Github Repositoryyyy of This Project",
         link: "https://github.com/aysilsimgekaracan/aysilsimgekaracan.github.io",
       },
     ],
